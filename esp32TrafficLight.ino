@@ -3,17 +3,16 @@
 
 const char* ssid = "Insert WiFi SSID here";
 const char* password = "Insert WiFi psk here";
-WiFiServer server(80);
-String header;
-
-char outputState = 0;
 const char red = 23;
 const char yellow = 22;
 const char green = 1;
 const char redMask = 0x01;
+
+WiFiServer server(80);
+String header;
+char outputState = 0;
 const char yellowMask = 0x02;
 const char greenMask = 0x04;
-
 unsigned long currentTime = millis();
 unsigned long previousTime = 0; 
 const long timeoutTime = 2000;
